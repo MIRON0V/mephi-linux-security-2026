@@ -1,0 +1,16 @@
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/bin/mount
+/usr/bin/fusermount3
+/usr/bin/chage
+/usr/bin/gpasswd
+/usr/bin/newgrp
+/usr/bin/passwd
+/usr/bin/umount
+/usr/bin/chsh
+/usr/bin/chfn
+/usr/bin/su
+/usr/bin/pkexec
+/usr/bin/sudo
+/usr/sbin/unix_chkpwd
+/usr/sbin/pam_timestamp_check
+/usr/sbin/grub2-set-bootflag

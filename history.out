@@ -1,0 +1,52 @@
+cat "$OUT/user1-date.sudoers"
+sudo chown "$USER":"$(id -gn)" "$OUT/user1-date.sudoers"
+sudo cp /etc/sudoers.d/user1-date "$OUT/user1-date.sudoers"
+ls -la
+sudo chown "$USER":"$(id -gn)" "$OUT/sudoers"
+sudo cp /etc/sudoers "$OUT/sudoers"
+ls
+sudo cp /etc/group "$OUT/group"
+sudo cp /etc/shadow "$OUT/shadow"
+sudo cp /etc/passwd "$OUT/passwd"
+cd mephi-linux-security-2026/
+su - user1
+sudo visudo -c
+sudo visudo -f /etc/sudoers.d/user1-date
+command -v date
+sudo getcap /home/user1/chown-cap > ~/mephi-linux-security-2026/getcap.out
+sudo stat /home/user1/chown-cap >> ~/mephi-linux-security-2026/stat.out
+stat /home/user1/chown-cap >> ~/mephi-linux-security-2026/stat.out
+sudo getcap /home/user1/chown-cap
+getcap /home/user1/chown-cap
+sudo setcap cap_chown=ep /home/user1/chown-cap
+sudo chmod 755 /home/user1/chown-cap
+sudo chown root:root /home/user1/chown-cap
+sudo cp /usr/bin/chown /home/user1/chown-cap
+vi  ~/mephi-linux-security-2026/stat.out
+sudo stat /home/user1/cat-suid >> ~/mephi-linux-security-2026/stat.out
+stat /home/user1/cat-suid >> ~/mephi-linux-security-2026/stat.out
+sudo ls -l /home/user1/cat-suid
+ls -l /home/user1/cat-suid
+sudo chmod 4755 /home/user1/cat-suid
+sudo chown root:root /home/user1/cat-suid
+sudo cp /usr/bin/cat /home/user1/cat-suid
+ps -eo pid,ruid,euid,user,comm | awk '$2==1234 && $3==0'
+command -v passwd
+vi ./mephi-linux-security-2026/setuid-files.out
+vi ./mephi-linux-security-2026/
+sudo find / -type f -perm -4000 -print 2>/dev/null \
+  | tee "$OUT/setuid-files.out"
+sudo find / -type f -perm -4000 -print 2>/dev/null
+mkdir -p "$OUT"
+set OUT "$HOME/mephi-linux-security-2026"
+OUT="$HOME/mephi-linux-security-2026"
+pwd
+stat /home/user1 > ~/mephi-linux-security-2026/stat.out
+sudo chage -l user1
+sudo chage -M 90 user1
+sudo passwd user1
+getent passwd user1
+id user1
+sudo useradd -m -u 1234 -g students user1
+getent group students
+sudo groupadd students
